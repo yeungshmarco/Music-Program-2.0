@@ -7,12 +7,13 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 color black=#000000, white=#FFFFFF;
+color defaultGrey= #d0cccc;
 PFont TimesNewRomanPSMT;
 Minim minim;
 AudioPlayer song1, song2, song3, song4; //song1 = Bury The Light
 AudioMetaData songMetaData1, songMetaData2, songMetaData3, songMetaData4;
 Boolean play=false;
-int songNo1;
+int songNo = 1;
 //
 void setup() {
   fullScreen();
@@ -56,10 +57,26 @@ void setup() {
 void draw() {
   fill(black);
   textFont(TimesNewRomanPSMT, 40);
-  text("Now Playing:", width*1/10, height*3/5, width*1/5, height*1/5);
+  text("Now Playing:", width*1/10, height*13/20, width*1/5, height*1/5);
   pauseButton();
+  //
+  if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
+    fill(black);
+  } else {
+    noStroke();
+    fill(defaultGrey);
+  }
+  rect(width*21/40, height*35/40, width*1/20, width*1/20);
+  strokeWeight(1);
+  //
+  song1.play();
+  if (song1.isPlaying() ) {
+    fill(black);
+    textAlign(RIGHT, CENTER);
+    text("Waltz in Low Light", width*3/10, height*13/20, width*3/5, height*1/5);
+    pic1();
+  }
 }
-//
 void keyPressed() {
 }
 //
