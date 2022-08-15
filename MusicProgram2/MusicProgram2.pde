@@ -57,7 +57,7 @@ void setup() {
 void draw() {
   fill(black);
   textFont(TimesNewRomanPSMT, 40);
-  text("Now Playing:", width*1/10, height*13/20, width*1/5, height*1/5);
+  text("Now Playing:", width*3/10, height*13/20, width*1/5, height*1/5);
   pauseButton();
   //
   if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
@@ -70,11 +70,14 @@ void draw() {
   strokeWeight(1);
   //
   song1.play();
-  if (song1.isPlaying() ) {
+  if (songNo == 1) {
     fill(black);
     textAlign(RIGHT, CENTER);
     text("Waltz in Low Light", width*3/10, height*13/20, width*3/5, height*1/5);
-    pic1();
+    fill(defaultGrey);
+    rect(width*1/10, height*3/5, width*1/6, height*1/8);
+    fill(black);
+    text(song1.position()/1000, width*2/10, height*13/20);
   }
 }
 void keyPressed() {
