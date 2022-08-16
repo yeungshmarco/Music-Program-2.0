@@ -62,20 +62,29 @@ void draw() {
   //
   if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
     fill(black);
+    noStroke();
+    rect(width*169/320, height*35/40, width*1/20, width*1/50);
+    fill(white);
+    textAlign(CENTER, CENTER);
+    textSize(15);
+    text("Play/Pause", width*169/320, height*35/40, width*1/20, width*1/50);
+    fill(black);
   } else {
     noStroke();
     fill(defaultGrey);
+    rect(width*169/320, height*35/40, width*1/20, width*1/50);
   }
-  rect(width*21/40, height*35/40, width*1/20, width*1/20);
   strokeWeight(1);
   //
-  song1.play();
   if (songNo == 1) {
     fill(black);
     textAlign(RIGHT, CENTER);
+    textSize(40);
     text("Waltz in Low Light", width*3/10, height*13/20, width*3/5, height*1/5);
     fill(defaultGrey);
+    noStroke();
     rect(width*1/10, height*3/5, width*1/6, height*1/8);
+    stroke(1);
     fill(black);
     text(song1.position()/1000, width*2/10, height*13/20);
   }
@@ -84,5 +93,12 @@ void keyPressed() {
 }
 //
 void mousePressed() {
+  if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
+    if (song1.isPlaying()) {
+      song1.pause();
+    } else {
+      song1.play();
+    }
+  }
 }
 //END MAIN Program
