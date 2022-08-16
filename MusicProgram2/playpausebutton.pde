@@ -2,7 +2,7 @@
 float pauseEllipseX, pauseEllipseY, pauseEllipseDiameter;
 float pauseTriX1, pauseTriY1, pauseTriX2, pauseTriY2, pauseTriX3, pauseTriY3;
 float xLength, yLength;
-Boolean outsideCircle=false;
+Boolean insideCircle=false;
 //
 void pauseButton() {
   pauseEllipseX = width*1/2;
@@ -22,20 +22,21 @@ void pauseButton() {
   fill(black);
   triangle(pauseTriX1, pauseTriY1, pauseTriX2, pauseTriY2, pauseTriX3, pauseTriY3);
 }
-/*
+//
 void circleDiameter() {
   if (mouseX > pauseEllipseX) {
-    xLength = mouseX - pauseEllipseDiameter/2;
+    xLength = mouseX - pauseEllipseX;
   } else {
-    xLength = pauseEllipseDiameter/2 - mouseX;
+    xLength = pauseEllipseX - mouseX;
   }
   if (mouseY > pauseEllipseY) {
-    yLength = mouseY - pauseEllipseDiameter/2;
+    yLength = mouseY - pauseEllipseY;
   } else {
-    yLength = pauseEllipseDiameter/2 - mouseY;
+    yLength = pauseEllipseY - mouseY;
   }
-  if (sqrt(sq(xLength)+sq(yLength)) > pauseEllipseDiameter/2) {
-    outsideCircle=true;
+  if (sqrt(sq(xLength)+sq(yLength)) < pauseEllipseDiameter/2) {
+    insideCircle=true;
+  } else {
+    insideCircle=false;
   }
 }
-*/

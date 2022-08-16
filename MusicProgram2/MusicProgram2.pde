@@ -6,8 +6,6 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 //Global Variables
-color black=#000000, white=#FFFFFF;
-color defaultGrey= #d0cccc;
 PFont TimesNewRomanPSMT;
 Minim minim;
 AudioPlayer song1, song2, song3, song4; //song1 = Bury The Light
@@ -52,13 +50,14 @@ void setup() {
   println( "Song Length (in minutes & seconds): ", (songMetaData4.length()/1000)/60, " minute", (songMetaData4.length()/1000)-((songMetaData4.length()/1000)/60 * 60), " seconds" );
   //
   TimesNewRomanPSMT = createFont("TimesNewRomanPSMT", 603);
+  circleDiameter();
 }
 //
 void draw() {
   fill(black);
   textFont(TimesNewRomanPSMT, 40);
-  text("Now Playing:", width*3/10, height*13/20, width*1/5, height*1/5);
   pauseButton();
+  quitButton();
   //
   if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
     fill(black);
@@ -78,9 +77,9 @@ void draw() {
   //
   if (songNo == 1) {
     fill(black);
-    textAlign(RIGHT, CENTER);
+    textAlign(CENTER, CENTER);
     textSize(40);
-    text("Waltz in Low Light", width*3/10, height*13/20, width*3/5, height*1/5);
+    text("Now Playing: Waltz in Low Light", width*0, height*13/20, width, height*1/5);
     fill(defaultGrey);
     noStroke();
     rect(width*1/10, height*3/5, width*1/6, height*1/8);
@@ -93,7 +92,7 @@ void keyPressed() {
 }
 //
 void mousePressed() {
-  if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
+  if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
     if (song1.isPlaying()) {
       song1.pause();
     } else {
