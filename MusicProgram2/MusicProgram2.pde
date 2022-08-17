@@ -77,31 +77,34 @@ void draw() {
   //
   if (songNo == 1) {
     pic1();
-    fill(black);
     textAlign(CENTER, CENTER);
     textSize(40);
+    fill(black);
     text("Good Lil Bro - Red Song", width*0, height*13/20, width, height*1/5);
     fill(defaultGrey);
     noStroke();
     rect(width*2/5, height*25/32, width*3/40, height*1/16);
     stroke(1);
     fill(black);
-    textAlign(RIGHT,CENTER);
-    text(song1.position()/1000, width*19/40, height*13/16);
+    if ((song1.position()/1000)-((song1.position()/1000)/60 * 60) <=9) {
+      text("0", width*242/576, height*13/16);
+    }
+    if (song1.position()/1000 <=9) {
+      text("0", width*131/288, height*13/16);
+    }
+    textAlign(RIGHT, CENTER);
+    text((song1.position()/1000/60), width*254/576, height*13/16);
+    text(":", width*129/288, height*259/320);
+    text((song1.position()/1000)-((song1.position()/1000)/60 * 60), width*19/40, height*13/16);
   }
 }
 void keyPressed() {
+  if ( key=='f' || key=='F' ) song1.skip(5000);
+  if ( key=='r' || key=='R' ) song1.skip(-5000);
 }
 //
 void mousePressed() {
   quitButtonMousePressed();
-  //
-  if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
-    if (song1.isPlaying()) {
-      song1.pause();
-    } else {
-      song1.play();
-    }
-  }
+  playPauseButtonMousePressed();
 }
 //END MAIN Program

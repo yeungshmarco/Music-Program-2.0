@@ -40,3 +40,36 @@ void circleDiameter() {
     insideCircle=false;
   }
 }
+//
+void playPauseButtonMousePressed() {
+  if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
+    if (songNo==1) {
+      if (song1.isPlaying()) {
+        song1.pause();
+      } else {
+        song1.play();
+      }
+    }
+    if (songNo==2) {
+      if (song2.isPlaying()) {
+        song2.pause();
+      } else {
+        song2.play();
+      }
+    }
+    if (songNo==3) {
+      if (song3.isPlaying()) {
+        song3.pause();
+      } else {
+        song3.play();
+      }
+    }
+    if (songNo==4) {
+      if (song4.isPlaying()) {
+        song4.pause();
+      } else {
+        song4.play();
+      }
+    }
+  }
+}
