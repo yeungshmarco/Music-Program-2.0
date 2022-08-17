@@ -27,11 +27,11 @@ void setup() {
   }
   //Minim variables
   minim = new Minim(this);
-  song1 = minim.loadFile("Waltz in Low Light - Nat Keefe & Hot Buttered Rum.mp3");
+  song1 = minim.loadFile("redsong.mp3");
   songMetaData1 = song1.getMetaData();
-  song2 = minim.loadFile("Crops - Telecasted.mp3");
+  song2 = minim.loadFile("official_music_video_6469774959983300664.mp3");
   songMetaData2 = song2.getMetaData();
-  song3 = minim.loadFile("Illusions - Anno Domini Beats copy.mp3");
+  song3 = minim.loadFile("back_number_8304614218291898954.mp3");
   songMetaData3 = song3.getMetaData();
   song4 = minim.loadFile("mp3-now.com - Bury the Light  Vergils battle theme from Devil May Cry 5 Special Edition.mp3");
   songMetaData4 = song4.getMetaData();
@@ -50,16 +50,16 @@ void setup() {
   println( "Song Length (in minutes & seconds): ", (songMetaData4.length()/1000)/60, " minute", (songMetaData4.length()/1000)-((songMetaData4.length()/1000)/60 * 60), " seconds" );
   //
   TimesNewRomanPSMT = createFont("TimesNewRomanPSMT", 603);
-  circleDiameter();
 }
 //
 void draw() {
   fill(black);
   textFont(TimesNewRomanPSMT, 40);
   pauseButton();
+  circleDiameter();
   quitButton();
   //
-  if (mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
+  if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
     fill(black);
     noStroke();
     rect(width*169/320, height*35/40, width*1/20, width*1/50);
@@ -76,22 +76,26 @@ void draw() {
   strokeWeight(1);
   //
   if (songNo == 1) {
+    pic1();
     fill(black);
     textAlign(CENTER, CENTER);
     textSize(40);
-    text("Now Playing: Waltz in Low Light", width*0, height*13/20, width, height*1/5);
+    text("Good Lil Bro - Red Song", width*0, height*13/20, width, height*1/5);
     fill(defaultGrey);
     noStroke();
-    rect(width*1/10, height*3/5, width*1/6, height*1/8);
+    rect(width*2/5, height*25/32, width*3/40, height*1/16);
     stroke(1);
     fill(black);
-    text(song1.position()/1000, width*2/10, height*13/20);
+    textAlign(RIGHT,CENTER);
+    text(song1.position()/1000, width*19/40, height*13/16);
   }
 }
 void keyPressed() {
 }
 //
 void mousePressed() {
+  quitButtonMousePressed();
+  //
   if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
     if (song1.isPlaying()) {
       song1.pause();
