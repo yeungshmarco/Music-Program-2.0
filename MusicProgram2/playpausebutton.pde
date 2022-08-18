@@ -46,6 +46,8 @@ void playPauseButtonMousePressed() {
     if (songNo==1) {
       if (song1.isPlaying()) {
         song1.pause();
+      } else if (song1.position() >= song1.length()-song1.length()/1000) {
+        songNo=2;
       } else {
         song1.play();
       }
@@ -53,6 +55,8 @@ void playPauseButtonMousePressed() {
     if (songNo==2) {
       if (song2.isPlaying()) {
         song2.pause();
+      } else if (song2.position() >= song2.length()-song2.length()/1000) {
+        songNo=1;
       } else {
         song2.play();
       }

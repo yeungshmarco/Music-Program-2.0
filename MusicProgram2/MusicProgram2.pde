@@ -27,13 +27,13 @@ void setup() {
   }
   //Minim variables
   minim = new Minim(this);
-  song1 = minim.loadFile("redsong.mp3");
+  song1 = minim.loadFile("redsong.mp3"); //Good Lil Bro - Red Song
   songMetaData1 = song1.getMetaData();
-  song2 = minim.loadFile("official_music_video_6469774959983300664.mp3");
+  song2 = minim.loadFile("official_music_video_6469774959983300664.mp3"); //Rokudenashi - One Voice
   songMetaData2 = song2.getMetaData();
-  song3 = minim.loadFile("back_number_8304614218291898954.mp3");
+  song3 = minim.loadFile("back_number_8304614218291898954.mp3"); //back number - Horizon
   songMetaData3 = song3.getMetaData();
-  song4 = minim.loadFile("mp3-now.com - Bury the Light  Vergils battle theme from Devil May Cry 5 Special Edition.mp3");
+  song4 = minim.loadFile("mp3-now.com - Bury the Light  Vergils battle theme from Devil May Cry 5 Special Edition.mp3"); //Casey Edwards & Victor Borba - Bury the Light
   songMetaData4 = song4.getMetaData();
   //Meta Data
   println( "Song Length (in milliseconds): ", songMetaData1.length() );
@@ -74,29 +74,8 @@ void draw() {
     rect(width*169/320, height*35/40, width*1/20, width*1/50);
   }
   strokeWeight(1);
-  //
-  if (songNo == 1) {
-    pic1();
-    textAlign(CENTER, CENTER);
-    textSize(40);
-    fill(black);
-    text("Good Lil Bro - Red Song", width*0, height*13/20, width, height*1/5);
-    fill(defaultGrey);
-    noStroke();
-    rect(width*2/5, height*25/32, width*3/40, height*1/16);
-    stroke(1);
-    fill(black);
-    if ((song1.position()/1000)-((song1.position()/1000)/60 * 60) <=9) {
-      text("0", width*242/576, height*13/16);
-    }
-    if (song1.position()/1000 <=9) {
-      text("0", width*131/288, height*13/16);
-    }
-    textAlign(RIGHT, CENTER);
-    text((song1.position()/1000/60), width*254/576, height*13/16);
-    text(":", width*129/288, height*259/320);
-    text((song1.position()/1000)-((song1.position()/1000)/60 * 60), width*19/40, height*13/16);
-  }
+  songNo1();
+  songNo2();
 }
 void keyPressed() {
   if ( key=='f' || key=='F' ) song1.skip(5000);
