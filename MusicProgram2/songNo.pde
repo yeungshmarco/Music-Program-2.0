@@ -65,3 +65,71 @@ void songNo2() {
     text((song2.length()/1000)-((song2.length()/1000)/60 * 60), width*47/80, height*13/16);
   }
 }
+//
+void songNo3() {
+  if (songNo == 3) {
+    fill(defaultGrey);
+    rect(0, height*1/3, width, height*7/15);
+    pic3();
+    textAlign(CENTER, CENTER);
+    textSize(40);
+    fill(black);
+    text("back number - Horizon", width*0, height*13/20, width, height*1/5);
+    fill(defaultGrey);
+    noStroke();
+    rect(width*2/5, height*25/32, width*1/4, height*1/16);
+    stroke(1);
+    fill(black);
+    textAlign(RIGHT, CENTER);
+    if (song3.position()/1000/60 <=9) {
+      text("0", width*247/576, height*13/16);
+    }
+    if ((song3.position()/1000)-((song3.position()/1000)/60 * 60) <=9) {
+      text("0", width*185/400, height*13/16);
+    }
+    text((song3.position()/1000/60), width*254/576, height*13/16);
+    text(":", width*129/288, height*259/320);
+    text((song3.position()/1000)-((song3.position()/1000)/60 * 60), width*19/40, height*13/16);
+    textAlign(CENTER, CENTER);
+    text("/", width*1/2, height*13/16);
+    textAlign(RIGHT, CENTER);
+    text("0", width*309/576, height*13/16);
+    text((song3.length()/1000/60), width*317/576, height*13/16);
+    text(":", width*161/288, height*259/320);
+    text((song3.length()/1000)-((song3.length()/1000)/60 * 60), width*47/80, height*13/16);
+  }
+}
+//
+void songNo4() {
+  if (songNo == 4) {
+    fill(defaultGrey);
+    rect(0, height*1/3, width, height*7/15);
+    pic4();
+    textAlign(CENTER, CENTER);
+    textSize(40);
+    fill(black);
+    text("Casey Edwards & Victor Borba - Bury The Light", width*0, height*13/20, width, height*1/5);
+    fill(defaultGrey);
+    noStroke();
+    rect(width*2/5, height*25/32, width*1/4, height*1/16);
+    stroke(1);
+    fill(black);
+    textAlign(RIGHT, CENTER);
+    if (song4.position()/1000/60 <=9) {
+      text("0", width*247/576, height*13/16);
+    }
+    if ((song4.position()/1000)-((song4.position()/1000)/60 * 60) <=9) {
+      text("0", width*185/400, height*13/16);
+    }
+    text((song4.position()/1000/60), width*254/576, height*13/16);
+    text(":", width*129/288, height*259/320);
+    text((song4.position()/1000)-((song4.position()/1000)/60 * 60), width*19/40, height*13/16);
+    textAlign(CENTER, CENTER);
+    text("/", width*1/2, height*13/16);
+    textAlign(RIGHT, CENTER);
+    text("0", width*309/576, height*13/16);
+    text((song4.length()/1000/60), width*317/576, height*13/16);
+    text(":", width*161/288, height*259/320);
+    text((song4.length()/1000)-((song4.length()/1000)/60 * 60), width*47/80, height*13/16);
+  }
+}

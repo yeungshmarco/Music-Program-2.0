@@ -76,10 +76,12 @@ void draw() {
   strokeWeight(1);
   songNo1();
   songNo2();
+  songNo3();
+  songNo4();
 }
 void keyPressed() {
-  if ( key=='f' || key=='F' ) song1.skip(5000);
-  if ( key=='r' || key=='R' ) song1.skip(-5000);
+  fastForwardKeyPressed();
+  fastForwardBackKeyPressed();
 }
 //
 void mousePressed() {
