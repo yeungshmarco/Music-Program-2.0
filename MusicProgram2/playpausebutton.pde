@@ -74,14 +74,33 @@ void playPauseButtonMousePressed() {
       }
     }
     if (songNo==4) {
+      println(song4.position());
       if (song4.isPlaying()) {
         song4.pause();
-      } else if (song4.position() >= song4.length()-song4.length()/10000) {
+      } else if (song4.position() >= song4.length()-song4.length()/300) {
         songNo=1;
         song4.rewind();
       } else {
         song4.play();
       }
     }
+  }
+}
+//
+void insideCircleTrue() {
+  if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
+    fill(black);
+    noStroke();
+    rect(width*169/320, height*35/40, width*1/20, width*1/50);
+    fill(white);
+    textAlign(CENTER, CENTER);
+    textSize(15);
+    text("Play/Pause", width*169/320, height*35/40, width*1/20, width*1/50);
+    fill(black);
+  } else {
+    noStroke();
+    fill(defaultGrey);
+    rect(width*169/320, height*35/40, width*1/20, width*1/50);
+    fill(black);
   }
 }

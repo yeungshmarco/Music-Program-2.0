@@ -1,7 +1,7 @@
 void songNo1() {
   if (songNo == 1) {
     fill(defaultGrey);
-    rect(0, height*1/3, width, height*7/15);
+    rect(0, height*1/3.125, width, height*7/15);
     pic1();
     textAlign(CENTER, CENTER);
     textSize(40);
@@ -35,7 +35,7 @@ void songNo1() {
 void songNo2() {
   if (songNo == 2) {
     fill(defaultGrey);
-    rect(0, height*1/3, width, height*7/15);
+    rect(0, height*1/3.125, width, height*7/15);
     pic2();
     textAlign(CENTER, CENTER);
     textSize(40);
@@ -69,7 +69,7 @@ void songNo2() {
 void songNo3() {
   if (songNo == 3) {
     fill(defaultGrey);
-    rect(0, height*1/3, width, height*7/15);
+    rect(0, height*1/3.125, width, height*7/15);
     pic3();
     textAlign(CENTER, CENTER);
     textSize(40);
@@ -102,8 +102,9 @@ void songNo3() {
 //
 void songNo4() {
   if (songNo == 4) {
+    println(song4.position());
     fill(defaultGrey);
-    rect(0, height*1/3, width, height*7/15);
+    rect(0, height*1/3.125, width, height*7/15);
     pic4();
     textAlign(CENTER, CENTER);
     textSize(40);

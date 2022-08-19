@@ -58,21 +58,9 @@ void draw() {
   pauseButton();
   circleDiameter();
   quitButton();
+  insideCircleTrue();
   //
-  if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
-    fill(black);
-    noStroke();
-    rect(width*169/320, height*35/40, width*1/20, width*1/50);
-    fill(white);
-    textAlign(CENTER, CENTER);
-    textSize(15);
-    text("Play/Pause", width*169/320, height*35/40, width*1/20, width*1/50);
-    fill(black);
-  } else {
-    noStroke();
-    fill(defaultGrey);
-    rect(width*169/320, height*35/40, width*1/20, width*1/50);
-  }
+  nextSongButton();
   strokeWeight(1);
   songNo1();
   songNo2();
