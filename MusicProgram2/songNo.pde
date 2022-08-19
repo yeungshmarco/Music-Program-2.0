@@ -102,7 +102,6 @@ void songNo3() {
 //
 void songNo4() {
   if (songNo == 4) {
-    println(song4.position());
     fill(defaultGrey);
     rect(0, height*1/3.125, width, height*7/15);
     pic4();

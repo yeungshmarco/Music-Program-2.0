@@ -65,6 +65,10 @@ void draw() {
   songNo2();
   songNo3();
   songNo4();
+  ifSong1IsTrue();
+  ifSong2IsTrue();
+  ifSong3IsTrue();
+  ifSong4IsTrue();
 }
 void keyPressed() {
   fastForwardKeyPressed();
@@ -74,5 +78,6 @@ void keyPressed() {
 void mousePressed() {
   quitButtonMousePressed();
   playPauseButtonMousePressed();
+  nextSongButtonMousePressed();
 }
 //END MAIN Program
