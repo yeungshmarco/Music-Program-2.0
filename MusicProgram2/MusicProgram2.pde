@@ -61,7 +61,6 @@ void draw() {
   insideCircleTrue();
   //
   nextSongButton();
-  strokeWeight(1);
   songNo1();
   songNo2();
   songNo3();
