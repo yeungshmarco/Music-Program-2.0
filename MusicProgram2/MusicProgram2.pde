@@ -65,10 +65,7 @@ void draw() {
   songNo2();
   songNo3();
   songNo4();
-  ifSong1IsTrue();
-  ifSong2IsTrue();
-  ifSong3IsTrue();
-  ifSong4IsTrue();
+  ifSong1234IsTrue();
 }
 void keyPressed() {
   fastForwardKeyPressed();
