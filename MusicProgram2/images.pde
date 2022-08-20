@@ -13,6 +13,6 @@ void pic3() {
   image(pic3, width*2/5, height*1/3.125, width*1/5, width*1/5);
 }
 void pic4() {
-  pic4 = loadImage("burythelightpic.jpeg"); //225x225
+  pic4 = loadImage("yoasobiprobably.jpeg"); //225x225
   image(pic4, width*2/5, height*1/3.125, width*1/5, width*1/5);
 }

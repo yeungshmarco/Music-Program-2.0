@@ -11,7 +11,7 @@ void quitButton() {
   } else {
     fill(red);
   }
-  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight, 20);
   fill(black);
   textAlign(CENTER, CENTER);
   text("Quit", quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);

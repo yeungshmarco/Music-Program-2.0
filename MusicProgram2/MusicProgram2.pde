@@ -33,7 +33,7 @@ void setup() {
   songMetaData2 = song2.getMetaData();
   song3 = minim.loadFile("back_number_8304614218291898954.mp3"); //back number - Horizon
   songMetaData3 = song3.getMetaData();
-  song4 = minim.loadFile("mp3-now.com - Bury the Light  Vergils battle theme from Devil May Cry 5 Special Edition.mp3"); //Casey Edwards & Victor Borba - Bury the Light
+  song4 = minim.loadFile("YOASOBI Probably Official Music  Video.mp3"); //Casey Edwards & Victor Borba - Bury the Light
   songMetaData4 = song4.getMetaData();
   //Meta Data
   println( "Song Length (in milliseconds): ", songMetaData1.length() );

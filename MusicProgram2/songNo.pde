@@ -1,5 +1,6 @@
 void songNo1() {
   if (songNo == 1) {
+    println(song1.position());
     fill(defaultGrey);
     rect(0, height*1/3.125, width, height*7/15);
     pic1();
@@ -34,6 +35,7 @@ void songNo1() {
 //
 void songNo2() {
   if (songNo == 2) {
+    println(song2.position());
     fill(defaultGrey);
     rect(0, height*1/3.125, width, height*7/15);
     pic2();
@@ -68,6 +70,7 @@ void songNo2() {
 //
 void songNo3() {
   if (songNo == 3) {
+    println(song3.position());
     fill(defaultGrey);
     rect(0, height*1/3.125, width, height*7/15);
     pic3();
@@ -102,13 +105,14 @@ void songNo3() {
 //
 void songNo4() {
   if (songNo == 4) {
+    println(song4.position());
     fill(defaultGrey);
     rect(0, height*1/3.125, width, height*7/15);
     pic4();
     textAlign(CENTER, CENTER);
     textSize(40);
     fill(black);
-    text("Casey Edwards & Victor Borba - Bury The Light", width*0, height*13/20, width, height*1/5);
+    text("YOASOBI - Probably", width*0, height*13/20, width, height*1/5);
     fill(defaultGrey);
     noStroke();
     rect(width*2/5, height*25/32, width*1/4, height*1/16);

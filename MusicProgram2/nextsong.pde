@@ -21,7 +21,7 @@ void nextSongButton() {
 }
 //
 void nextSongButtonMousePressed() {
-  if (mouseX>nextSongTriX1 && mouseX<nextSongTriX1+(nextSongLineX1-nextSongTriX1) && mouseY>nextSongTriY1 && mouseY<nextSongTriY2) {
+  if (mouseX>nextSongTriX1 && mouseX<nextSongLineX1 && mouseY>nextSongTriY1 && mouseY<nextSongTriY2) {
     if (songNo==1) {
       songNo2=true;
       song1.rewind();
@@ -45,22 +45,16 @@ void nextSongButtonMousePressed() {
   }
 }
 //
-void ifSong1IsTrue() {
+void ifSong1234IsTrue() {
   if (songNo1==true) {
     songNo=1;
   }
-}
-void ifSong2IsTrue() {
   if (songNo2==true) {
     songNo=2;
   }
-}
-void ifSong3IsTrue() {
   if (songNo3==true) {
     songNo=3;
   }
-}
-void ifSong4IsTrue() {
   if (songNo4==true) {
     songNo=4;
   }
