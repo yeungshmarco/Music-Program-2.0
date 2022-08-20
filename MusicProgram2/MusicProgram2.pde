@@ -68,6 +68,7 @@ void draw() {
   ifSong1234IsTrue();
 }
 void keyPressed() {
+  playPauseButtonKeyPressed();
   fastForwardKeyPressed();
   fastForwardBackKeyPressed();
 }

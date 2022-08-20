@@ -41,6 +41,51 @@ void circleDiameter() {
   }
 }
 //
+void playPauseButtonKeyPressed() {
+  if (key==' ') {
+    if (songNo==1) {
+      if (song1.isPlaying()) {
+        song1.pause();
+      } else if (song1.position() >= song1.length()-song1.length()/1000) {
+        songNo=2;
+        song1.rewind();
+      } else {
+        song1.play();
+      }
+    }
+    if (songNo==2) {
+      if (song2.isPlaying()) {
+        song2.pause();
+      } else if (song2.position() >= song2.length()-song2.length()/1000) {
+        songNo=3;
+        song2.rewind();
+      } else {
+        song2.play();
+      }
+    }
+    if (songNo==3) {
+      if (song3.isPlaying()) {
+        song3.pause();
+      } else if (song3.position() >= song3.length()-song3.length()/1000) {
+        songNo=4;
+        song3.rewind();
+      } else {
+        song3.play();
+      }
+    }
+    if (songNo==4) {
+      if (song4.isPlaying()) {
+        song4.pause();
+      } else if (song4.position() >= song4.length()-song4.length()/300) {
+        songNo=1;
+        song4.rewind();
+      } else {
+        song4.play();
+      }
+    }
+  }
+}
+//
 void playPauseButtonMousePressed() {
   if (insideCircle==true && mouseX>pauseEllipseX-pauseEllipseDiameter/2 && mouseX<pauseEllipseX+pauseEllipseDiameter/2 && mouseY>pauseEllipseY-pauseEllipseDiameter/2 && mouseY<pauseEllipseY+pauseEllipseDiameter/2) {
     if (songNo==1) {
