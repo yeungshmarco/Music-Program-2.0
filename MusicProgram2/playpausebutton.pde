@@ -121,7 +121,7 @@ void playPauseButtonMousePressed() {
     if (songNo==4) {
       if (song4.isPlaying()) {
         song4.pause();
-      } else if (song4.position() >= song4.length()-song4.length()/300) {
+      } else if (song4.position() >= song4.length()-song4.length()/100) {
         songNo=1;
         song4.rewind();
       } else {
