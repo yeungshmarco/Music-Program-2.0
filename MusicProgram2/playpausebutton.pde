@@ -94,6 +94,7 @@ void playPauseButtonMousePressed() {
       } else if (song1.position() >= song1.length()-song1.length()/1000) {
         songNo=2;
         song1.rewind();
+        
       } else {
         song1.play();
       }

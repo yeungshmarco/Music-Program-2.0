@@ -1,6 +1,6 @@
 float nextSongTriX1, nextSongTriY1, nextSongTriX2, nextSongTriY2, nextSongTriX3, nextSongTriY3;
 float nextSongLineX1, nextSongLineY1, nextSongLineX2, nextSongLineY2;
-Boolean songNo1=false, songNo2=false, songNo3=false, songNo4=false;
+Boolean songNo1=false, songNo2=false, songNo3=false, songNo4=false, songNo5=false;
 //
 void nextSongButton() {
   nextSongTriX1 = width*167/288;
