@@ -13,11 +13,27 @@ void nextSongButton() {
   nextSongLineY1 = nextSongTriY1;
   nextSongLineX2 = nextSongLineX1;
   nextSongLineY2 = nextSongTriY2;
-  strokeWeight(5);
-  stroke(black);
-  triangle(nextSongTriX1, nextSongTriY1, nextSongTriX2, nextSongTriY2, nextSongTriX3, nextSongTriY3);
-  line(nextSongLineX1, nextSongLineY1, nextSongLineX2, nextSongLineY2);
-  noStroke();
+  if (mouseX>nextSongTriX1 && mouseX<nextSongLineX1 && mouseY>nextSongTriY1 && mouseY<nextSongTriY2) {
+    fill(black);
+    noStroke();
+    rect(width*175/288, height*35/40, width*1/20, width*1/50);
+    fill(white);
+    textAlign(CENTER, CENTER);
+    textSize(15);
+    text("Next Song", width*175/288, height*35/40, width*1/20, width*1/50);
+    fill(black);
+  } else {
+    noStroke();
+    fill(black);
+    rect(width*175/288, height*35/40, width*1/20, width*1/50);
+    fill(black);
+  }
+strokeWeight(5);
+stroke(white);
+fill(white);
+triangle(nextSongTriX1, nextSongTriY1, nextSongTriX2, nextSongTriY2, nextSongTriX3, nextSongTriY3);
+line(nextSongLineX1, nextSongLineY1, nextSongLineX2, nextSongLineY2);
+noStroke();
 }
 //
 void nextSongButtonMousePressed() {
@@ -70,12 +86,12 @@ void ifSong1234IsTrueNextSong() {
     song4.rewind();
     song4.pause();
     songNo=1;
-  } 
+  }
   if (songNo2NextSong==true) {
     song1.rewind();
     song1.pause();
     songNo=2;
-  } 
+  }
   if (songNo3NextSong==true) {
     song2.rewind();
     song2.pause();

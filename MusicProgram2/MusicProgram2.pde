@@ -15,6 +15,7 @@ int songNo = 1;
 //
 void setup() {
   fullScreen();
+  background(black);
   println ("width:", width, "\t height:", height, "\t displayWidth:", displayWidth, "\t\t displayHeight:", displayHeight);
   //
   String ls="Landscape or Square", p="portrait", DO="Display Orientation:", instruct="Please turn your phone";

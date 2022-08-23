@@ -13,6 +13,21 @@ void prevSongButton() {
   prevSongLineY1 = prevSongTriY1;
   prevSongLineX2 = prevSongLineX1;
   prevSongLineY2 = prevSongTriY2;
+  if (mouseX>nextSongTriX1 && mouseX<nextSongLineX1 && mouseY>nextSongTriY1 && mouseY<nextSongTriY2) {
+    fill(black);
+    noStroke();
+    rect(width*175/288, height*35/40, width*1/20, width*1/50);
+    fill(white);
+    textAlign(CENTER, CENTER);
+    textSize(15);
+    text("Prev. Song", width*175/288, height*35/40, width*1/20, width*1/50);
+    fill(black);
+  } else {
+    noStroke();
+    fill(black);
+    rect(width*175/288, height*35/40, width*1/20, width*1/50);
+    fill(black);
+  }
   strokeWeight(5);
   stroke(black);
   triangle(prevSongTriX1, prevSongTriY1, prevSongTriX2, prevSongTriY2, prevSongTriX3, prevSongTriY3);

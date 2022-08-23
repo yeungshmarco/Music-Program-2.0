@@ -167,7 +167,7 @@ void insideCircleTrue() {
     fill(black);
   } else {
     noStroke();
-    fill(defaultGrey);
+    fill(black);
     rect(width*169/320, height*35/40, width*1/20, width*1/50);
     fill(black);
   }
