@@ -27,24 +27,40 @@ void nextSongButtonMousePressed() {
       songNo2NextSong=true;
       songNo3NextSong=false;
       songNo4NextSong=false;
+      songNo1PrevSong=false;
+      songNo2PrevSong=false;
+      songNo3PrevSong=false;
+      songNo4PrevSong=false;
     }
     if (songNo==2) {
       songNo1NextSong=false;
       songNo2NextSong=false;
       songNo3NextSong=true;
       songNo4NextSong=false;
+      songNo1PrevSong=false;
+      songNo2PrevSong=false;
+      songNo3PrevSong=false;
+      songNo4PrevSong=false;
     }
     if (songNo==3) {
       songNo1NextSong=false;
       songNo2NextSong=false;
       songNo3NextSong=false;
       songNo4NextSong=true;
+      songNo1PrevSong=false;
+      songNo2PrevSong=false;
+      songNo3PrevSong=false;
+      songNo4PrevSong=false;
     }
     if (songNo==4) {
       songNo1NextSong=true;
       songNo2NextSong=false;
       songNo3NextSong=false;
       songNo4NextSong=false;
+      songNo1PrevSong=false;
+      songNo2PrevSong=false;
+      songNo3PrevSong=false;
+      songNo4PrevSong=false;
     }
   }
 }

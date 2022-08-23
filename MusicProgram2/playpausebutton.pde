@@ -96,6 +96,10 @@ void playPauseButtonMousePressed() {
         songNo2NextSong=true;
         songNo3NextSong=false;
         songNo4NextSong=false;
+        songNo1PrevSong=false;
+        songNo2PrevSong=false;
+        songNo3PrevSong=false;
+        songNo4PrevSong=false;
       } else {
         song1.play();
       }
@@ -108,6 +112,10 @@ void playPauseButtonMousePressed() {
         songNo2NextSong=false;
         songNo3NextSong=true;
         songNo4NextSong=false;
+        songNo1PrevSong=false;
+        songNo2PrevSong=false;
+        songNo3PrevSong=false;
+        songNo4PrevSong=false;
       } else {
         song2.play();
       }
@@ -120,6 +128,10 @@ void playPauseButtonMousePressed() {
         songNo2NextSong=false;
         songNo3NextSong=false;
         songNo4NextSong=true;
+        songNo1PrevSong=false;
+        songNo2PrevSong=false;
+        songNo3PrevSong=false;
+        songNo4PrevSong=false;
       } else {
         song3.play();
       }
@@ -127,11 +139,15 @@ void playPauseButtonMousePressed() {
     if (songNo==4) {
       if (song4.isPlaying()) {
         song4.pause();
-      } else if (song4.position() >= song4.length()-song4.length()/100) {
+      } else if (song4.position() >= song4.length()-song4.length()/1000) {
         songNo1NextSong=true;
         songNo2NextSong=false;
         songNo3NextSong=false;
         songNo4NextSong=false;
+        songNo1PrevSong=false;
+        songNo2PrevSong=false;
+        songNo3PrevSong=false;
+        songNo4PrevSong=false;
       } else {
         song4.play();
       }

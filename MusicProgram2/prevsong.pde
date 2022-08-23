@@ -28,24 +28,40 @@ void prevSongButtonMousePressed() {
       songNo2PrevSong=false;
       songNo3PrevSong=false;
       songNo4PrevSong=true;
+      songNo1NextSong=false;
+      songNo2NextSong=false;
+      songNo3NextSong=false;
+      songNo4NextSong=false;
     }
     if (songNo==2) {
       songNo1PrevSong=true;
       songNo2PrevSong=false;
       songNo3PrevSong=false;
       songNo4PrevSong=false;
+      songNo1NextSong=false;
+      songNo2NextSong=false;
+      songNo3NextSong=false;
+      songNo4NextSong=false;
     }
     if (songNo==3) {
       songNo1PrevSong=false;
       songNo2PrevSong=true;
       songNo3PrevSong=false;
       songNo4PrevSong=false;
+      songNo1NextSong=false;
+      songNo2NextSong=false;
+      songNo3NextSong=false;
+      songNo4NextSong=false;
     }
     if (songNo==4) {
       songNo1PrevSong=false;
       songNo2PrevSong=false;
       songNo3PrevSong=true;
       songNo4PrevSong=false;
+      songNo1NextSong=false;
+      songNo2NextSong=false;
+      songNo3NextSong=false;
+      songNo4NextSong=false;
     }
   }
 }
@@ -55,12 +71,12 @@ void ifSong1234IsTruePrevSong() {
     song2.rewind();
     song2.pause();
     songNo=1;
-  } 
+  }
   if (songNo2PrevSong==true) {
     song3.rewind();
     song3.pause();
     songNo=2;
-  } 
+  }
   if (songNo3PrevSong==true) {
     song4.rewind();
     song4.pause();
