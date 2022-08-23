@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 PFont TimesNewRomanPSMT;
 Minim minim;
-AudioPlayer song1, song2, song3, song4; //song1 = Bury The Light
+AudioPlayer song1, song2, song3, song4;
 AudioMetaData songMetaData1, songMetaData2, songMetaData3, songMetaData4;
 Boolean play=false;
 int songNo = 1;
@@ -61,10 +61,10 @@ void draw() {
   insideCircleTrue();
   //
   nextSongButton();
-  songNo1();
   songNo2();
   songNo3();
   songNo4();
+  songNo1();
   ifSong1234IsTrue();
 }
 void keyPressed() {

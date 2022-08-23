@@ -1,6 +1,6 @@
 float nextSongTriX1, nextSongTriY1, nextSongTriX2, nextSongTriY2, nextSongTriX3, nextSongTriY3;
 float nextSongLineX1, nextSongLineY1, nextSongLineX2, nextSongLineY2;
-Boolean songNo1=false, songNo2=false, songNo3=false, songNo4=false, songNo5=false;
+Boolean songNo1=false, songNo2=false, songNo3=false, songNo4=false;
 //
 void nextSongButton() {
   nextSongTriX1 = width*167/288;
@@ -23,39 +23,51 @@ void nextSongButton() {
 void nextSongButtonMousePressed() {
   if (mouseX>nextSongTriX1 && mouseX<nextSongLineX1 && mouseY>nextSongTriY1 && mouseY<nextSongTriY2) {
     if (songNo==1) {
+      songNo1=false;
       songNo2=true;
-      song1.rewind();
-      song1.pause();
+      songNo3=false;
+      songNo4=false;
     }
     if (songNo==2) {
+      songNo1=false;
+      songNo2=false;
       songNo3=true;
-      song2.rewind();
-      song2.pause();
+      songNo4=false;
     }
     if (songNo==3) {
+      songNo1=false;
+      songNo2=false;
+      songNo3=false;
       songNo4=true;
-      song3.rewind();
-      song3.pause();
     }
     if (songNo==4) {
       songNo1=true;
-      song4.rewind();
-      song4.pause();
+      songNo2=false;
+      songNo3=false;
+      songNo4=false;
     }
   }
 }
 //
 void ifSong1234IsTrue() {
   if (songNo1==true) {
+    song4.rewind();
+    song4.pause();
     songNo=1;
-  }
+  } 
   if (songNo2==true) {
+    song1.rewind();
+    song1.pause();
     songNo=2;
-  }
+  } 
   if (songNo3==true) {
+    song2.rewind();
+    song2.pause();
     songNo=3;
   }
   if (songNo4==true) {
+    song3.rewind();
+    song3.pause();
     songNo=4;
   }
 }
