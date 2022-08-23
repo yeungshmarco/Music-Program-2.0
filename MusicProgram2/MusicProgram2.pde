@@ -61,11 +61,13 @@ void draw() {
   insideCircleTrue();
   //
   nextSongButton();
+  prevSongButton();
+  songNo1();
   songNo2();
   songNo3();
   songNo4();
-  songNo1();
-  ifSong1234IsTrue();
+  ifSong1234IsTrueNextSong();
+  ifSong1234IsTruePrevSong();
 }
 void keyPressed() {
   playPauseButtonKeyPressed();
@@ -77,5 +79,6 @@ void mousePressed() {
   quitButtonMousePressed();
   playPauseButtonMousePressed();
   nextSongButtonMousePressed();
+  prevSongButtonMousePressed();
 }
 //END MAIN Program
