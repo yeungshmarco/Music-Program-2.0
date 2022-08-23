@@ -1,6 +1,7 @@
 //Global Variables
 float pauseEllipseX, pauseEllipseY, pauseEllipseDiameter;
 float pauseTriX1, pauseTriY1, pauseTriX2, pauseTriY2, pauseTriX3, pauseTriY3;
+float pauseLine1X1, pauseLine1Y1, pauseLine1X2, pauseLine1Y2, pauseLine2X1, pauseLine2Y1, pauseLine2X2, pauseLine2Y2;
 float xLength, yLength;
 Boolean insideCircle=false;
 //
@@ -19,8 +20,31 @@ void pauseButton() {
   pauseTriY2 = height*37/40;
   pauseTriX3 = width*33/64;
   pauseTriY3 = pauseEllipseY;
+  pauseLine1X1 = width*63/128;
+  pauseLine1Y1 = height*71/80;
+  pauseLine1X2 = pauseLine1X1;
+  pauseLine1Y2 = height*73/80;
+  pauseLine2X1 = width*65/128;
+  pauseLine2Y1 = pauseLine1Y1;
+  pauseLine2X2 = pauseLine2X1;
+  pauseLine2Y2 = pauseLine1Y2;
   fill(black);
-  triangle(pauseTriX1, pauseTriY1, pauseTriX2, pauseTriY2, pauseTriX3, pauseTriY3);
+  if (song1.isPlaying() || song2.isPlaying() || song3.isPlaying() || song4.isPlaying()) {
+    fill(white);
+    ellipse(pauseEllipseX, pauseEllipseY, pauseEllipseDiameter, pauseEllipseDiameter);
+    stroke(black);
+    strokeWeight(15);
+    line(pauseLine1X1, pauseLine1Y1, pauseLine1X2, pauseLine1Y2);
+    line(pauseLine2X1, pauseLine2Y1, pauseLine2X2, pauseLine2Y2);
+    noStroke();
+  } else {
+    fill(white);
+    ellipse(pauseEllipseX, pauseEllipseY, pauseEllipseDiameter, pauseEllipseDiameter);
+    fill(black);
+    triangle(pauseTriX1, pauseTriY1, pauseTriX2, pauseTriY2, pauseTriX3, pauseTriY3);
+    noStroke();
+  }
+  fill(white);
 }
 //
 void circleDiameter() {
@@ -163,7 +187,11 @@ void insideCircleTrue() {
     fill(white);
     textAlign(CENTER, CENTER);
     textSize(15);
-    text("Play/Pause", width*169/320, height*35/40, width*1/20, width*1/50);
+    if (song1.isPlaying() || song2.isPlaying() || song3.isPlaying() || song4.isPlaying()) {
+      text("Pause", width*169/320, height*35/40, width*1/20, width*1/50);
+    } else {
+      text("Play", width*169/320, height*35/40, width*1/20, width*1/50);
+    }
     fill(black);
   } else {
     noStroke();
