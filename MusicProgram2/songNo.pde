@@ -1,18 +1,18 @@
 void songNo1() {
   if (songNo == 1) {
     println(song1.position());
-    fill(defaultGrey);
+    fill(black);
     rect(0, height*1/3.125, width, height*7/15);
     pic1();
     textAlign(CENTER, CENTER);
     textSize(40);
-    fill(black);
+    fill(white);
     text("Good Lil Bro - Red Song", width*0, height*13/20, width, height*1/5);
-    fill(defaultGrey);
+    fill(black);
     noStroke();
     rect(width*2/5, height*25/32, width*1/4, height*1/16);
     stroke(1);
-    fill(black);
+    fill(white);
     textAlign(RIGHT, CENTER);
     if (song1.position()/1000/60 <=9) {
       text("0", width*247/576, height*13/16);
@@ -36,18 +36,18 @@ void songNo1() {
 void songNo2() {
   if (songNo == 2) {
     println(song2.position());
-    fill(defaultGrey);
+    fill(black);
     rect(0, height*1/3.125, width, height*7/15);
     pic2();
     textAlign(CENTER, CENTER);
     textSize(40);
-    fill(black);
+    fill(white);
     text("Rokudenashi - One Voice", width*0, height*13/20, width, height*1/5);
-    fill(defaultGrey);
+    fill(black);
     noStroke();
     rect(width*2/5, height*25/32, width*1/4, height*1/16);
     stroke(1);
-    fill(black);
+    fill(white);
     textAlign(RIGHT, CENTER);
     if (song2.position()/1000/60 <=9) {
       text("0", width*247/576, height*13/16);
@@ -71,18 +71,18 @@ void songNo2() {
 void songNo3() {
   if (songNo == 3) {
     println(song3.position());
-    fill(defaultGrey);
+    fill(black);
     rect(0, height*1/3.125, width, height*7/15);
     pic3();
     textAlign(CENTER, CENTER);
     textSize(40);
-    fill(black);
+    fill(white);
     text("back number - Horizon", width*0, height*13/20, width, height*1/5);
-    fill(defaultGrey);
+    fill(black);
     noStroke();
     rect(width*2/5, height*25/32, width*1/4, height*1/16);
     stroke(1);
-    fill(black);
+    fill(white);
     textAlign(RIGHT, CENTER);
     if (song3.position()/1000/60 <=9) {
       text("0", width*247/576, height*13/16);
@@ -106,18 +106,18 @@ void songNo3() {
 void songNo4() {
   if (songNo == 4) {
     println(song4.position());
-    fill(defaultGrey);
+    fill(black);
     rect(0, height*1/3.125, width, height*7/15);
     pic4();
     textAlign(CENTER, CENTER);
     textSize(40);
-    fill(black);
+    fill(white);
     text("YOASOBI - Probably", width*0, height*13/20, width, height*1/5);
-    fill(defaultGrey);
+    fill(black);
     noStroke();
     rect(width*2/5, height*25/32, width*1/4, height*1/16);
     stroke(1);
-    fill(black);
+    fill(white);
     textAlign(RIGHT, CENTER);
     if (song4.position()/1000/60 <=9) {
       text("0", width*247/576, height*13/16);

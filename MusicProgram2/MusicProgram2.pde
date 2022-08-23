@@ -56,6 +56,7 @@ void setup() {
 void draw() {
   fill(black);
   textFont(TimesNewRomanPSMT, 40);
+  cursor(CROSS);
   pauseButton();
   circleDiameter();
   quitButton();
@@ -69,6 +70,7 @@ void draw() {
   songNo4();
   ifSong1234IsTrueNextSong();
   ifSong1234IsTruePrevSong();
+  chooseSong();
 }
 void keyPressed() {
   playPauseButtonKeyPressed();
