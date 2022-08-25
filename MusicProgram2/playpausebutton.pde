@@ -31,14 +31,17 @@ void pauseButton() {
   fill(black);
   if (song1.isPlaying() || song2.isPlaying() || song3.isPlaying() || song4.isPlaying()) {
     fill(white);
-    ellipse(pauseEllipseX, pauseEllipseY, pauseEllipseDiameter, pauseEllipseDiameter);
     stroke(black);
+    strokeWeight(3);
+    ellipse(pauseEllipseX, pauseEllipseY, pauseEllipseDiameter, pauseEllipseDiameter);
     strokeWeight(15);
     line(pauseLine1X1, pauseLine1Y1, pauseLine1X2, pauseLine1Y2);
     line(pauseLine2X1, pauseLine2Y1, pauseLine2X2, pauseLine2Y2);
     noStroke();
   } else {
     fill(white);
+    stroke(black);
+    strokeWeight(3);
     ellipse(pauseEllipseX, pauseEllipseY, pauseEllipseDiameter, pauseEllipseDiameter);
     fill(black);
     triangle(pauseTriX1, pauseTriY1, pauseTriX2, pauseTriY2, pauseTriX3, pauseTriY3);
