@@ -1,5 +1,5 @@
 PFont TimesNewRomanPSBoldMT;
-Boolean songNo1Playing=false;
+//Boolean songNo1Playing=false;
 
 void chooseSong() {
   TimesNewRomanPSBoldMT = createFont("TimesNewRomanPS-BoldMT", 601);
@@ -25,38 +25,66 @@ void chooseSong() {
   text("One Voice", width*55/64, height*37/96);
   textFont(TimesNewRomanPSBoldMT, 15);
   fill(defaultGrey);
-  text("Good Lil Bro", width*55/64, height*25/96);
+  text("Good Lil Bro", width*55/64, height*25/96); //+height*4/96
   text("Rokudenashi", width*55/64, height*41/96);
   textAlign(CENTER, CENTER);
   if (songNo==1) {
-    if (songNo1Playing==true) {
-      stroke(white);
-      line(width*22/32, height*9/48, width*22/32, height*15/48);
-      line(width*22/32, height*9/48, width*63/64, height*9/48);
-      line(width*22/32, height*15/48, width*63/64, height*15/48);
-      line(width*63/64, height*9/48, width*63/64, height*15/48);
-    } else {
-      stroke(black);
-      line(width*22/32, height*9/48, width*22/32, height*15/48);
-      line(width*22/32, height*9/48, width*63/64, height*9/48);
-      line(width*22/32, height*15/48, width*63/64, height*15/48);
-      line(width*63/64, height*9/48, width*63/64, height*15/48);
-      stroke(white);
-    }
-    if (songNo==2) {
-      stroke(white);
-      line(width*22/32, height*17/48, width*22/32, height*23/48);
-      line(width*22/32, height*17/48, width*63/64, height*17/48);
-      line(width*22/32, height*23/48, width*63/64, height*23/48);
-      line(width*63/64, height*17/48, width*63/64, height*23/48);
-      stroke(black);
-    } else {
-      stroke(black);
-      line(width*22/32, height*9/48, width*22/32, height*15/48);
-      line(width*22/32, height*9/48, width*63/64, height*9/48);
-      line(width*22/32, height*15/48, width*63/64, height*15/48);
-      line(width*63/64, height*9/48, width*63/64, height*15/48);
-      stroke(white);
-    }
+    stroke(white);
+    line(width*22/32, height*9/48, width*22/32, height*15/48); //Left Vertical Line
+    line(width*22/32, height*9/48, width*63/64, height*9/48); //Upper Horizontal Line
+    line(width*22/32, height*15/48, width*63/64, height*15/48); //Bottom Horizontal Line
+    line(width*63/64, height*9/48, width*63/64, height*15/48); //Right Vertical Line
+  } else {
+    stroke(defaultGrey);
+    line(width*22/32, height*9/48, width*22/32, height*15/48); //Left Vertical Line
+    line(width*22/32, height*9/48, width*63/64, height*9/48); //Upper Horizontal Line
+    line(width*22/32, height*15/48, width*63/64, height*15/48); //Bottom Horizontal Line
+    line(width*63/64, height*9/48, width*63/64, height*15/48); //Right Vertical Line
+    stroke(white);
+  }
+  if (songNo==2) {
+    stroke(white);
+    line(width*22/32, height*17/48, width*22/32, height*23/48); //Left Vertical Line
+    line(width*22/32, height*17/48, width*63/64, height*17/48); //Upper Horizontal Line
+    line(width*22/32, height*23/48, width*63/64, height*23/48); //Bottom Horizontal Line
+    line(width*63/64, height*17/48, width*63/64, height*23/48); //Right Vertical Line
+    stroke(black);
+  } else {
+    stroke(defaultGrey);
+    line(width*22/32, height*17/48, width*22/32, height*23/48); //Left Vertical Line
+    line(width*22/32, height*17/48, width*63/64, height*17/48); //Upper Horizontal Line
+    line(width*22/32, height*23/48, width*63/64, height*23/48); //Bottom Horizontal Line
+    line(width*63/64, height*17/48, width*63/64, height*23/48); //Right Vertical Line
+    stroke(white);
+  }
+  if (songNo==3) {
+    stroke(white);
+    line(width*22/32, height*25/48, width*22/32, height*31/48); //Left Vertical Line
+    line(width*22/32, height*25/48, width*63/64, height*25/48); //Upper Horizontal Line
+    line(width*22/32, height*31/48, width*63/64, height*31/48); //Bottom Horizontal Line
+    line(width*63/64, height*25/48, width*63/64, height*31/48); //Right Vertical Line
+    stroke(black);
+  } else {
+    stroke(defaultGrey);
+    line(width*22/32, height*25/48, width*22/32, height*31/48); //Left Vertical Line
+    line(width*22/32, height*25/48, width*63/64, height*25/48); //Upper Horizontal Line
+    line(width*22/32, height*31/48, width*63/64, height*31/48); //Bottom Horizontal Line
+    line(width*63/64, height*25/48, width*63/64, height*31/48); //Right Vertical Line
+    stroke(white);
+  }
+  if (songNo==4) {
+    stroke(white);
+    line(width*22/32, height*33/48, width*22/32, height*39/48); //Left Vertical Line
+    line(width*22/32, height*33/48, width*63/64, height*33/48); //Upper Horizontal Line
+    line(width*22/32, height*39/48, width*63/64, height*39/48); //Bottom Horizontal Line
+    line(width*63/64, height*33/48, width*63/64, height*39/48); //Right Vertical Line
+    stroke(black);
+  } else {
+    stroke(defaultGrey);
+    line(width*22/32, height*33/48, width*22/32, height*39/48); //Left Vertical Line
+    line(width*22/32, height*33/48, width*63/64, height*33/48); //Upper Horizontal Line
+    line(width*22/32, height*39/48, width*63/64, height*39/48); //Bottom Horizontal Line
+    line(width*63/64, height*33/48, width*63/64, height*39/48); //Right Vertical Line
+    stroke(white);
   }
 }
