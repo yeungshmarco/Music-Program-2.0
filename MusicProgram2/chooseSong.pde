@@ -23,10 +23,14 @@ void chooseSong() {
   textAlign(LEFT, CENTER);
   text("Red Song", width*55/64, height*21/96);
   text("One Voice", width*55/64, height*37/96);
+  text("Horizon", width*55/64, height*53/96);
+  text("Probably", width*55/64, height*69/96);
   textFont(TimesNewRomanPSBoldMT, 15);
   fill(defaultGrey);
   text("Good Lil Bro", width*55/64, height*25/96); //+height*4/96
   text("Rokudenashi", width*55/64, height*41/96);
+  text("back number", width*55/64, height*57/96);
+  text("YOASOBI", width*55/64, height*73/96);
   textAlign(CENTER, CENTER);
   if (songNo==1) {
     stroke(white);
@@ -35,7 +39,7 @@ void chooseSong() {
     line(width*22/32, height*15/48, width*63/64, height*15/48); //Bottom Horizontal Line
     line(width*63/64, height*9/48, width*63/64, height*15/48); //Right Vertical Line
   } else {
-    stroke(defaultGrey);
+    stroke(black);
     line(width*22/32, height*9/48, width*22/32, height*15/48); //Left Vertical Line
     line(width*22/32, height*9/48, width*63/64, height*9/48); //Upper Horizontal Line
     line(width*22/32, height*15/48, width*63/64, height*15/48); //Bottom Horizontal Line
@@ -50,7 +54,7 @@ void chooseSong() {
     line(width*63/64, height*17/48, width*63/64, height*23/48); //Right Vertical Line
     stroke(black);
   } else {
-    stroke(defaultGrey);
+    stroke(black);
     line(width*22/32, height*17/48, width*22/32, height*23/48); //Left Vertical Line
     line(width*22/32, height*17/48, width*63/64, height*17/48); //Upper Horizontal Line
     line(width*22/32, height*23/48, width*63/64, height*23/48); //Bottom Horizontal Line
@@ -65,7 +69,7 @@ void chooseSong() {
     line(width*63/64, height*25/48, width*63/64, height*31/48); //Right Vertical Line
     stroke(black);
   } else {
-    stroke(defaultGrey);
+    stroke(black);
     line(width*22/32, height*25/48, width*22/32, height*31/48); //Left Vertical Line
     line(width*22/32, height*25/48, width*63/64, height*25/48); //Upper Horizontal Line
     line(width*22/32, height*31/48, width*63/64, height*31/48); //Bottom Horizontal Line
@@ -80,7 +84,7 @@ void chooseSong() {
     line(width*63/64, height*33/48, width*63/64, height*39/48); //Right Vertical Line
     stroke(black);
   } else {
-    stroke(defaultGrey);
+    stroke(black);
     line(width*22/32, height*33/48, width*22/32, height*39/48); //Left Vertical Line
     line(width*22/32, height*33/48, width*63/64, height*33/48); //Upper Horizontal Line
     line(width*22/32, height*39/48, width*63/64, height*39/48); //Bottom Horizontal Line
