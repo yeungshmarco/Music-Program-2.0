@@ -1,4 +1,4 @@
-void fastForwardBackKeyPressed() {
+void reverseKeyPressed() {
   if ( keyCode == LEFT ) {
     if (songNo==1) {
       song1.skip(-5000);

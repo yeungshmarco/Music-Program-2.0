@@ -59,12 +59,14 @@ void draw() {
   cursor(CROSS);
   pauseButton();
   circleDiameter();
+  skipCircleDiameter();
   quitButton();
   insideCircleTrue();
+  insideSkipCircleTrue();
   //
   nextSongButton();
   prevSongButton();
-  fastForwardButton();
+  skipButton();
   songNo1();
   songNo2();
   songNo3();
@@ -75,8 +77,8 @@ void draw() {
 }
 void keyPressed() {
   playPauseButtonKeyPressed();
-  fastForwardKeyPressed();
-  fastForwardBackKeyPressed();
+  skipKeyPressed();
+  reverseKeyPressed();
 }
 //
 void mousePressed() {
@@ -84,5 +86,6 @@ void mousePressed() {
   playPauseButtonMousePressed();
   nextSongButtonMousePressed();
   prevSongButtonMousePressed();
+  skipButtonMousePressed();
 }
 //END MAIN Program
