@@ -64,6 +64,7 @@ void draw() {
   //
   nextSongButton();
   prevSongButton();
+  fastForwardButton();
   songNo1();
   songNo2();
   songNo3();
@@ -71,12 +72,6 @@ void draw() {
   ifSong1234IsTrueNextSong();
   ifSong1234IsTruePrevSong();
   chooseSong();
-  /*fill(white);
-  rect(width*30/32, height*1/10, width*2/32, height*1/10);
-  fill(black);
-  if (mouseX>width*30/32 && mouseX<width && mouseY>height*1/8 && mouseY<height*2/10) {
-    chooseSong();
-  }*/
 }
 void keyPressed() {
   playPauseButtonKeyPressed();
