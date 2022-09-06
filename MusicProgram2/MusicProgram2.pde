@@ -60,13 +60,16 @@ void draw() {
   pauseButton();
   circleDiameter();
   skipCircleDiameter();
+  reverseCircleDiameter();
   quitButton();
   insideCircleTrue();
   insideSkipCircleTrue();
+  insideReverseCircleTrue();
   //
   nextSongButton();
   prevSongButton();
   skipButton();
+  reverseButton();
   songNo1();
   songNo2();
   songNo3();
@@ -87,5 +90,6 @@ void mousePressed() {
   nextSongButtonMousePressed();
   prevSongButtonMousePressed();
   skipButtonMousePressed();
+  reverseButtonMousePressed();
 }
 //END MAIN Program
