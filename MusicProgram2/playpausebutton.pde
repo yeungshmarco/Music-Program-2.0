@@ -118,15 +118,6 @@ void playPauseButtonMousePressed() {
     if (songNo==1) {
       if (song1.isPlaying()) {
         song1.pause();
-      } else if (song1.position() >= song1.length()-song1.length()/1000) {
-        songNo1NextSong=false;
-        songNo2NextSong=true;
-        songNo3NextSong=false;
-        songNo4NextSong=false;
-        songNo1PrevSong=false;
-        songNo2PrevSong=false;
-        songNo3PrevSong=false;
-        songNo4PrevSong=false;
       } else {
         song1.play();
       }
@@ -134,15 +125,6 @@ void playPauseButtonMousePressed() {
     if (songNo==2) {
       if (song2.isPlaying()) {
         song2.pause();
-      } else if (song2.position() >= song2.length()-song2.length()/1000) {
-        songNo1NextSong=false;
-        songNo2NextSong=false;
-        songNo3NextSong=true;
-        songNo4NextSong=false;
-        songNo1PrevSong=false;
-        songNo2PrevSong=false;
-        songNo3PrevSong=false;
-        songNo4PrevSong=false;
       } else {
         song2.play();
       }
@@ -150,15 +132,6 @@ void playPauseButtonMousePressed() {
     if (songNo==3) {
       if (song3.isPlaying()) {
         song3.pause();
-      } else if (song3.position() >= song3.length()-song3.length()/1000) {
-        songNo1NextSong=false;
-        songNo2NextSong=false;
-        songNo3NextSong=false;
-        songNo4NextSong=true;
-        songNo1PrevSong=false;
-        songNo2PrevSong=false;
-        songNo3PrevSong=false;
-        songNo4PrevSong=false;
       } else {
         song3.play();
       }
@@ -166,15 +139,6 @@ void playPauseButtonMousePressed() {
     if (songNo==4) {
       if (song4.isPlaying()) {
         song4.pause();
-      } else if (song4.position() >= song4.length()-song4.length()/1000) {
-        songNo1NextSong=true;
-        songNo2NextSong=false;
-        songNo3NextSong=false;
-        songNo4NextSong=false;
-        songNo1PrevSong=false;
-        songNo2PrevSong=false;
-        songNo3PrevSong=false;
-        songNo4PrevSong=false;
       } else {
         song4.play();
       }

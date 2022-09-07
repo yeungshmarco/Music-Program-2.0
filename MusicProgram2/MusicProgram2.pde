@@ -65,6 +65,7 @@ void draw() {
   insideCircleTrue();
   insideSkipCircleTrue();
   insideReverseCircleTrue();
+  //ifLoopTrue();
   nextSongButton();
   prevSongButton();
   skipButton();
@@ -77,6 +78,7 @@ void draw() {
   ifSong1234IsTrueNextSong();
   ifSong1234IsTruePrevSong();
   chooseSong();
+  autoNextSong();
 }
 void keyPressed() {
   playPauseButtonKeyPressed();
@@ -91,5 +93,6 @@ void mousePressed() {
   prevSongButtonMousePressed();
   skipButtonMousePressed();
   reverseButtonMousePressed();
+  loopButtonMousePressed();
 }
 //END MAIN Program
