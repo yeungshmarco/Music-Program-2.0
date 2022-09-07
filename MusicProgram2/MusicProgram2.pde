@@ -65,11 +65,11 @@ void draw() {
   insideCircleTrue();
   insideSkipCircleTrue();
   insideReverseCircleTrue();
-  //
   nextSongButton();
   prevSongButton();
   skipButton();
   reverseButton();
+  loopButton();
   songNo1();
   songNo2();
   songNo3();
